@@ -134,4 +134,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', 'dino000423.pythonanywhere.com']
