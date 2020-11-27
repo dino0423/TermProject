@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <title>KGB's Blog</title>
+</head>
+
+    <br>
+
+    {% for blog in blogs %}
+        <main role="main" class="container">
+            <div class="jumbotron">
+                <h1>KGB's Blog</h1>
+                <br>
+
+                <h4>작성일 : {{ blog.pub_date }}</h4>
+                <br>
+
+                <h4>작성자 : {{ blog.author }}</h4>
+                <br>
+
+                <a class="btn btn-lg btn-primary"
+                   href="{% url 'detail' blog.id %}"
+                   role="button">내용 확인하기 &raquo;</a>
+            </div>
+        </main>
+    {% endfor %}
+
+{% endblock %}
